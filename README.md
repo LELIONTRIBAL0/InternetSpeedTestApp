@@ -7,10 +7,8 @@ A simple and lightweight Internet Speed Test application written in **Python**. 
 ## 📸 Screenshots
 
 ### 🖥️ GUI Version
-![GUI Screenshot](https://raw.githubusercontent.com/ritwikjamuar/speedtest-gui/main/screenshots/speedtest_gui_ss.png)
+![image](https://github.com/user-attachments/assets/ac39cf42-b6ba-4061-b2e9-c3994d4f3f89)
 
-### 💻 CLI Version
-![CLI Screenshot](https://raw.githubusercontent.com/AshutoshDash1999/Internet-Speed-Test/main/screenshot.png)
 
 ---
 
@@ -24,6 +22,8 @@ A simple and lightweight Internet Speed Test application written in **Python**. 
 - ✅ Shareable result link  
 
 ---
+![Screenshot 2025-05-15 112841](https://github.com/user-attachments/assets/1c1fd4fd-507a-42c5-b413-cd34734e36b3)
+
 
 ## 📁 Folder Structure
 
@@ -60,7 +60,7 @@ IP Address
 ISP
 
 Speedtest result URL
-
+![image](https://github.com/user-attachments/assets/ac39cf42-b6ba-4061-b2e9-c3994d4f3f89)
 python speed_test_gui.py
 ```bash
 📃 License
