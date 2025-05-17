@@ -27,26 +27,27 @@ def get_external_ip_and_isp():
 
 def perform_speed_test():
     st = speedtest.Speedtest()
-    console = Console()
-    with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}"), transient=True) as progress:
-        progress.add_task(description="Searching for best server...", total=None)
-        best_server = st.get_best_server()
-    console.print(f"[bold green]✅ Best Server:[/bold green] {best_server['host']} in {best_server['name']}, {best_server['country']}")
-    with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}"), transient=True) as progress:
-        progress.add_task(description="Measuring download speed...", total=None)
-        download_speed_mbps = st.download() / 1_000_000
-    with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}"), transient=True) as progress:
-        progress.add_task(description="Measuring upload speed...", total=None)
-        upload_speed_mbps = st.upload() / 1_000_000
-    ping_ms = st.results.ping
-    result_link = st.results.share()
-    return {
-        "download": download_speed_mbps,
-        "upload": upload_speed_mbps,
-        "ping": ping_ms,
-        "server": best_server,
-        "result_link": result_link
-    }
+    try:
+        with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}"), transient=True) as progress:
+            progress.add_task(description="Searching for best server...", total=None)
+            best_server = st.get_best_server()
+        with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}"), transient=True) as progress:
+            progress.add_task(description="Measuring download speed...", total=None)
+            download_speed_mbps = st.download() / 1_000_000
+        with Progress(SpinnerColumn(), TextColumn("[progress.description]{task.description}"), transient=True) as progress:
+            progress.add_task(description="Measuring upload speed...", total=None)
+            upload_speed_mbps = st.upload() / 1_000_000
+        ping_ms = st.results.ping
+        result_link = st.results.share()
+        return {
+            "download": download_speed_mbps,
+            "upload": upload_speed_mbps,
+            "ping": ping_ms,
+            "server": best_server,
+            "result_link": result_link
+        }
+    except Exception as e:
+        return {"error": str(e)}
 
 def main():
     console = Console()
@@ -64,12 +65,16 @@ def main():
     table.add_row("Location", f"{city}, {country}")
     console.print(table)
     results = perform_speed_test()
+    if 'error' in results:
+        console.print(f"[bold red]Speed test failed:[/bold red] {results['error']}")
+        return
     result_table = Table(title="Speed Test Results", show_header=True, header_style="bold green")
     result_table.add_column("Metric", style="dim")
     result_table.add_column("Value")
     result_table.add_row("Download", f"{results['download']:.2f} Mbps")
     result_table.add_row("Upload", f"{results['upload']:.2f} Mbps")
     result_table.add_row("Ping", f"{results['ping']:.2f} ms")
+    result_table.add_row("Server", f"{results['server']['name']}, {results['server']['country']}")
     console.print(result_table)
     console.print(f"[bold blue]Share your results:[/bold blue] {results['result_link']}")
 
