@@ -1,8 +1,22 @@
+
 # Internet Speed Test App 🌐⚡
 
 ![GitHub release](https://img.shields.io/github/release/LELIONTRIBAL0/InternetSpeedTestApp.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
 Welcome to the **Internet Speed Test App**! This application provides a quick, simple, and open-source way to check your internet performance. Unlike online browser-based tools, this app gives you direct access to vital metrics such as download and upload speeds, ping (latency), ISP and external IP address, and a link to share your Speedtest.net results.
+
+---
+
+## 🚀 New CLI Features (2025)
+
+- Modern CLI UI with [rich](https://github.com/Textualize/rich): colored panels, tables, and progress spinners
+- Displays local and external IP, ISP, and location before the test
+- Shows server info and test time in the results table
+- Friendly error handling and retry option if the test fails
+- Option to save results to a file (`speedtest_results.txt`) after a successful test
+- Code cleanup and improved structure
+
+---
 
 ## Table of Contents
 
@@ -14,9 +28,8 @@ Welcome to the **Internet Speed Test App**! This application provides a quick, s
 - [License](#license)
 - [Contact](#contact)
 
-## Features
 
-The **Internet Speed Test App** includes the following features:
+## Features
 
 - **Download Speed**: Measure how fast data can be downloaded from the internet.
 - **Upload Speed**: Check how quickly data can be sent to the internet.
@@ -24,6 +37,8 @@ The **Internet Speed Test App** includes the following features:
 - **ISP Information**: Get details about your Internet Service Provider.
 - **External IP Address**: Find out your public IP address.
 - **Result Sharing**: Easily share your Speedtest.net results with a link.
+- **Modern CLI UI**: Beautiful output with colors, tables, and spinners (see above)
+- **Retry and Save**: Retry failed tests and save results to a file
 
 ## Installation
 
@@ -33,14 +48,26 @@ To install the **Internet Speed Test App**, follow these steps:
 2. **Extract the files** if necessary.
 3. **Run the application** by executing the main script in your terminal or command prompt.
 
+
 ## Usage
 
-Once you have installed the app, you can start testing your internet speed. 
+Once you have installed the app, you can start testing your internet speed.
 
-1. **Open the application**: Launch the app from your terminal or command prompt.
-2. **Select the test type**: Choose whether you want to measure download speed, upload speed, or ping.
-3. **View your results**: The app will display your internet performance metrics clearly.
-4. **Share your results**: Use the provided link to share your Speedtest.net results with friends or colleagues.
+### Run CLI Version
+```powershell
+python InternetSpeedTestApp/speed_test_cli.py
+```
+
+#### CLI Features
+- See network details (local IP, external IP, ISP, location)
+- See speed test results in a formatted table (download, upload, ping, server, ISP, test time)
+- Retry the test if it fails
+- Optionally save results to `speedtest_results.txt`
+
+### Run GUI Version
+```powershell
+python InternetSpeedTestApp/speed_test_gui.py
+```
 
 For more details, refer to the [Releases](https://github.com/LELIONTRIBAL0/InternetSpeedTestApp/releases) section.
 
