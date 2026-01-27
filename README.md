@@ -1,68 +1,81 @@
-# 📶 Internet Speed Test App
+# Internet Speed Test App 🌐⚡
 
-A simple and lightweight Internet Speed Test application written in **Python**. This tool allows you to test your internet speed via **Command Line Interface (CLI)** or a user-friendly **Graphical User Interface (GUI)**.
+![GitHub release](https://img.shields.io/github/release/LELIONTRIBAL0/InternetSpeedTestApp.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
----
+Welcome to the **Internet Speed Test App**! This application provides a quick, simple, and open-source way to check your internet performance. Unlike online browser-based tools, this app gives you direct access to vital metrics such as download and upload speeds, ping (latency), ISP and external IP address, and a link to share your Speedtest.net results.
 
-## 📸 Screenshots
+## Table of Contents
 
-### 🖥️ GUI Version
-![image](https://github.com/user-attachments/assets/ac39cf42-b6ba-4061-b2e9-c3994d4f3f89)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
+## Features
 
----
+The **Internet Speed Test App** includes the following features:
 
-## 🚀 Features
+- **Download Speed**: Measure how fast data can be downloaded from the internet.
+- **Upload Speed**: Check how quickly data can be sent to the internet.
+- **Ping (Latency)**: Determine the response time of your internet connection.
+- **ISP Information**: Get details about your Internet Service Provider.
+- **External IP Address**: Find out your public IP address.
+- **Result Sharing**: Easily share your Speedtest.net results with a link.
 
-- ✅ Download & Upload speed test  
-- ✅ Ping (latency) measurement  
-- ✅ Best server selection  
-- ✅ ISP and IP address detection  
-- ✅ CLI & GUI modes  
-- ✅ Shareable result link  
+## Installation
 
----
-![Screenshot 2025-05-15 112841](https://github.com/user-attachments/assets/1c1fd4fd-507a-42c5-b413-cd34734e36b3)
+To install the **Internet Speed Test App**, follow these steps:
 
+1. **Download the latest release** from [here](https://github.com/LELIONTRIBAL0/InternetSpeedTestApp/releases). Make sure to choose the appropriate version for your operating system.
+2. **Extract the files** if necessary.
+3. **Run the application** by executing the main script in your terminal or command prompt.
 
-## 📁 Folder Structure
+## Usage
 
+Once you have installed the app, you can start testing your internet speed. 
 
-InternetSpeedTestApp/
-├── speed_test_cli.py # CLI-based speed test script
-├── speed_test_gui.py # GUI-based speed test using Tkinter
-├── requirements.txt # Required Python libraries
-└── README.md # This documentation file
+1. **Open the application**: Launch the app from your terminal or command prompt.
+2. **Select the test type**: Choose whether you want to measure download speed, upload speed, or ping.
+3. **View your results**: The app will display your internet performance metrics clearly.
+4. **Share your results**: Use the provided link to share your Speedtest.net results with friends or colleagues.
 
-yaml
-Copy
-Edit
+For more details, refer to the [Releases](https://github.com/LELIONTRIBAL0/InternetSpeedTestApp/releases) section.
 
----
+## Technologies Used
 
-## 📦 Installation
+The **Internet Speed Test App** is built using the following technologies:
 
-Install Python packages using pip:
+- **Python**: The primary programming language used for development.
+- **Requests**: A library for making HTTP requests to gather data.
+- **Socket**: Used for network connections and operations.
+- **Speedtest-cli**: A command-line interface for testing internet speed.
+- **Modular Design**: The app follows a modular design for easy updates and enhancements.
 
+## Contributing
 
-pip install -r requirements.txt
-python speed_test_cli.py
-It will output:
+We welcome contributions to improve the **Internet Speed Test App**! If you want to contribute, please follow these steps:
 
-Download Speed
+1. **Fork the repository**: Click the "Fork" button at the top right of this page.
+2. **Create a new branch**: Use a descriptive name for your branch.
+3. **Make your changes**: Implement your features or fixes.
+4. **Submit a pull request**: Describe your changes and why they are needed.
 
-Upload Speed
+## License
 
-Ping
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
-IP Address
+## Contact
 
-ISP
+For questions or suggestions, feel free to reach out:
 
-Speedtest result URL
-![image](https://github.com/user-attachments/assets/ac39cf42-b6ba-4061-b2e9-c3994d4f3f89)
-python speed_test_gui.py
-```bash
-📃 License
-This project is licensed under the MIT License. You are free to use, modify, and distribute it.
+- **GitHub**: [LELIONTRIBAL0](https://github.com/LELIONTRIBAL0)
+- **Email**: [your_email@example.com](mailto:your_email@example.com)
 
+## Conclusion
+
+The **Internet Speed Test App** offers a straightforward way to measure your internet performance. With its easy-to-use interface and essential features, it stands out as a reliable tool for anyone looking to assess their connection speed. Download the latest version from the [Releases](https://github.com/LELIONTRIBAL0/InternetSpeedTestApp/releases) section and start testing today!
+
+Feel free to explore, contribute, and enhance this open-source project!
